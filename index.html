@@ -65,9 +65,9 @@
       <thead><tr><th class="f">No.</th><th class="f">Project</th><th class="f">Result</th><th class="f">Year</th></tr></thead>
       <tbody>
         <tr><td class="pos"><span>01</span></td><td class="proj"><a href="#schneider">Schneider Electric<small>Electromechanical design internship</small></a></td><td class="res"><span>1,000+ BOMs updated for one unified label</span></td><td class="yr"><span>2025–26</span></td></tr>
-        <tr><td class="pos"><span>02</span></td><td class="proj"><a href="#frisa">FRISA Aerospace<small>Mandrel fatigue failure</small></a></td><td class="res"><span>Predicted 49,500 cycles, failed after 30</span></td><td class="yr"><span>2026</span></td></tr>
+        <tr><td class="pos"><span>02</span></td><td class="proj"><a href="#frisa">FRISA Aerospace<small>Mandrel fatigue failure</small></a></td><td class="res"><span>Several hundred forgings predicted, failed after 30</span></td><td class="yr"><span>2026</span></td></tr>
         <tr><td class="pos"><span>03</span></td><td class="proj"><a href="#daikin-coupling">Daikin<small>Coupling failure and redesign</small></a></td><td class="res"><span>First mode raised to 118&nbsp;Hz (simulated)</span></td><td class="yr"><span>2026</span></td></tr>
-        <tr><td class="pos"><span>04</span></td><td class="proj"><a href="#daikin-hx">Daikin<small>Tube-bank heat exchanger CFD</small></a></td><td class="res"><span>3 turbulator lengths compared</span></td><td class="yr"><span>2026</span></td></tr>
+        <tr><td class="pos"><span>04</span></td><td class="proj"><a href="#daikin-hx">Daikin<small>Tube-bank heat exchanger CFD</small></a></td><td class="res"><span>Turbulators cut heat transfer by 1.8–2.8%</span></td><td class="yr"><span>2026</span></td></tr>
         <tr><td class="pos"><span>05</span></td><td class="proj"><a href="#carrier">Carrier<small>Psychrometric chamber CFD</small></a></td><td class="res"><span>≈4% lower peak velocity (simulated)</span></td><td class="yr"><span>2025</span></td></tr>
         <tr><td class="pos"><span>06</span></td><td class="proj"><a href="#ternium">Ternium<small>Sheet-steel formability FEM</small></a></td><td class="res"><span>FLC minimum ≈ 0.19 near plane strain</span></td><td class="yr"><span>2025</span></td></tr>
         <tr><td class="pos"><span>07</span></td><td class="proj"><a href="#gears">Planetary gear set<small>Personal project</small></a></td><td class="res"><span>Working printed prototype</span></td><td class="yr"><span>2025</span></td></tr>
@@ -123,7 +123,7 @@
     </div>
     <div class="p-body">
       <div>
-        <p class="result">FEA predicted <span class="val">49,500</span> cycles under ideal static loading. In service, the mandrel failed after <span class="val">30</span> forgings.</p>
+        <p class="result">FEA predicted <span class="val">49,500</span> load cycles under ideal static loading, equal to several hundred forging sequences. In service, the mandrel failed after <span class="val">30</span> forging sequences.</p>
         <p class="lead">Investigated why a 4340 steel ring-rolling mandrel failed far sooner than an ideal static-load FEA predicted. The team combined FEA fatigue-life estimation, fracture mechanics, Rockwell and Vickers hardness profiling, metallography (2% nital etch) and SEM fractography.</p>
         <ul class="findings">
           <li>SEM fractography showed chevron marks, ratchet marks and a large instantaneous-fracture zone, consistent with low-cycle rotating-bending fatigue from multiple crack origins.</li>
@@ -175,10 +175,11 @@
     </div>
     <div class="p-body">
       <div>
-        <p class="result">Heat transfer and pressure drop compared for three turbulator configurations (no insert, 116&nbsp;mm coil, 165&nbsp;mm coil).</p>
-        <p class="lead">Modeled heat transfer in the cross-flow tube-bank exchanger of a Daikin HVAC heating module to quantify how coil turbulators change convective heat transfer and pressure drop.</p>
+        <p class="result">Against theory, both wave turbulators lowered net heat transfer, by <span class="val">1.8%</span> and <span class="val">2.8%</span>, so the base case without inserts was kept.</p>
+        <p class="lead">Modeled heat transfer in the cross-flow tube-bank exchanger of a Daikin HVAC heating module to quantify how wave turbulators (4.55 and 6.5&nbsp;in wavelength) change convective heat transfer and pressure drop.</p>
         <ul class="findings">
-          <li>Longer turbulators raised near-wall velocity and the surface-temperature spread along the tube bank, increasing both convective heat transfer and pressure drop.</li>
+          <li>Three signs pointed to limits of the CFD model rather than of the physics: pressure drop fell with turbulators (1.83 and 1.87&nbsp;Pa vs 2.30&nbsp;Pa), mesh orthogonal quality dropped from 0.826 to 0.735 and 0.783, and the cold-air outlet temperature stayed at about 296&nbsp;K in all cases.</li>
+          <li>The flow inside the tubes is laminar (Re&nbsp;=&nbsp;1,585) and the wave turbulator only disturbs it axially, so the team recommended twisted-tape inserts from the literature, to be confirmed with a physical prototype.</li>
         </ul>
       </div>
       <div class="views">
@@ -294,7 +295,7 @@
     <div class="spec">
       <section><h3 class="f">CAD</h3><ul><li><span>Creo Parametric, SolidWorks</span></li></ul></section>
       <section><h3 class="f">CAE and simulation</h3><ul><li><span>Ansys Fluent, LS-DYNA, Mechanical</span></li></ul></section>
-      <section><h3 class="f">Data analysis</h3><ul><li><span>Excel (advanced), Power BI, Minitab</span></li></ul></section>
+      <section><h3 class="f">Data analysis</h3><ul><li><span>Excel, Minitab (DoE, ANOVA)</span></li></ul></section>
       <section><h3 class="f">PLM</h3><ul><li><span>Windchill, PDM processes</span></li></ul></section>
       <section><h3 class="f">Certifications</h3><ul><li><span>PMI CAPM</span><span>2026</span></li><li><span>Lean Six Sigma Yellow Belt</span><span>2026</span></li><li><span>Dassault Systèmes CSWA</span><span>2025</span></li></ul></section>
       <section><h3 class="f">Languages</h3><ul><li><span>Spanish</span><span>Native</span></li><li><span>English, TOEFL iBT 120/120</span><span>C2, 2025</span></li><li><span>German, Goethe-Zertifikat</span><span>B2, 2026</span></li></ul></section>

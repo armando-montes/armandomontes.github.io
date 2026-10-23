@@ -65,9 +65,9 @@
       <thead><tr><th class="f">Nr.</th><th class="f">Projekt</th><th class="f">Ergebnis</th><th class="f">Jahr</th></tr></thead>
       <tbody>
         <tr><td class="pos"><span>01</span></td><td class="proj"><a href="#schneider">Schneider Electric<small>Praktikum Elektromechanische Konstruktion</small></a></td><td class="res"><span>Über 1.000 Stücklisten für ein einheitliches Etikett aktualisiert</span></td><td class="yr"><span>2025–26</span></td></tr>
-        <tr><td class="pos"><span>02</span></td><td class="proj"><a href="#frisa">FRISA Aerospace<small>Ermüdungsbruch eines Dorns</small></a></td><td class="res"><span>49.500 Zyklen vorhergesagt, Bruch nach 30</span></td><td class="yr"><span>2026</span></td></tr>
+        <tr><td class="pos"><span>02</span></td><td class="proj"><a href="#frisa">FRISA Aerospace<small>Ermüdungsbruch eines Dorns</small></a></td><td class="res"><span>Mehrere Hundert Schmiedevorgänge vorhergesagt, Bruch nach 30</span></td><td class="yr"><span>2026</span></td></tr>
         <tr><td class="pos"><span>03</span></td><td class="proj"><a href="#daikin-coupling">Daikin<small>Kupplungsversagen und Redesign</small></a></td><td class="res"><span>Erste Eigenfrequenz auf 118&nbsp;Hz erhöht (simuliert)</span></td><td class="yr"><span>2026</span></td></tr>
-        <tr><td class="pos"><span>04</span></td><td class="proj"><a href="#daikin-hx">Daikin<small>CFD eines Rohrbündel-Wärmetauschers</small></a></td><td class="res"><span>3 Turbulatorlängen verglichen</span></td><td class="yr"><span>2026</span></td></tr>
+        <tr><td class="pos"><span>04</span></td><td class="proj"><a href="#daikin-hx">Daikin<small>CFD eines Rohrbündel-Wärmetauschers</small></a></td><td class="res"><span>Turbulatoren senkten den Wärmeübergang um 1,8–2,8&nbsp;%</span></td><td class="yr"><span>2026</span></td></tr>
         <tr><td class="pos"><span>05</span></td><td class="proj"><a href="#carrier">Carrier<small>CFD einer psychrometrischen Prüfkammer</small></a></td><td class="res"><span>≈4&nbsp;% geringere Spitzengeschwindigkeit (simuliert)</span></td><td class="yr"><span>2025</span></td></tr>
         <tr><td class="pos"><span>06</span></td><td class="proj"><a href="#ternium">Ternium<small>FEM zur Umformbarkeit von Stahlblech</small></a></td><td class="res"><span>FLC-Minimum ≈ 0,19 nahe ebener Dehnung</span></td><td class="yr"><span>2025</span></td></tr>
         <tr><td class="pos"><span>07</span></td><td class="proj"><a href="#gears">Planetengetriebe<small>Eigenes Projekt</small></a></td><td class="res"><span>Funktionsfähiger gedruckter Prototyp</span></td><td class="yr"><span>2025</span></td></tr>
@@ -123,7 +123,7 @@
     </div>
     <div class="p-body">
       <div>
-        <p class="result">Die FEA sagte unter idealer statischer Last <span class="val">49.500</span> Zyklen voraus. Im Betrieb versagte der Dorn nach <span class="val">30</span> Schmiedevorgängen.</p>
+        <p class="result">Die FEA sagte unter idealer statischer Last <span class="val">49.500</span> Lastzyklen voraus, also mehrere Hundert Schmiedesequenzen. Im Betrieb versagte der Dorn nach <span class="val">30</span> Schmiedesequenzen.</p>
         <p class="lead">Untersucht, warum ein Ringwalzdorn aus 4340-Stahl weit früher versagte, als eine FEA unter idealer statischer Last vorhersagte. Das Team kombinierte FEA-Lebensdauerabschätzung, Bruchmechanik, Härteprofile nach Rockwell und Vickers, Metallografie (2&nbsp;% Nital-Ätzung) und REM-Fraktografie.</p>
         <ul class="findings">
           <li>Die REM-Fraktografie zeigte Fischgrätmuster, Rastlinien und eine große Restbruchzone, typisch für Kurzzeit-Umlaufbiegeermüdung mit mehreren Rissausgängen.</li>
@@ -175,10 +175,11 @@
     </div>
     <div class="p-body">
       <div>
-        <p class="result">Wärmeübergang und Druckverlust für drei Turbulator-Varianten verglichen (ohne Einsatz, 116-mm-Wendel, 165-mm-Wendel).</p>
-        <p class="lead">Wärmeübertragung im Kreuzstrom-Rohrbündelwärmetauscher eines Daikin-Heizmoduls modelliert, um zu quantifizieren, wie Wendelturbulatoren den konvektiven Wärmeübergang und den Druckverlust verändern.</p>
+        <p class="result">Entgegen der Theorie senkten beide Wellenturbulatoren den Netto-Wärmeübergang, um <span class="val">1,8&nbsp;%</span> und <span class="val">2,8&nbsp;%</span>; daher blieb der Basisfall ohne Einsatz die beste Variante.</p>
+        <p class="lead">Wärmeübertragung im Kreuzstrom-Rohrbündelwärmetauscher eines Daikin-Heizmoduls modelliert, um zu quantifizieren, wie Wellenturbulatoren (Wellenlänge 4,55 und 6,5&nbsp;in) den konvektiven Wärmeübergang und den Druckverlust verändern.</p>
         <ul class="findings">
-          <li>Längere Turbulatoren erhöhten die wandnahe Geschwindigkeit und die Spreizung der Oberflächentemperatur entlang des Rohrbündels und damit sowohl den Wärmeübergang als auch den Druckverlust.</li>
+          <li>Drei Hinweise sprachen für Grenzen des CFD-Modells statt der Physik: Der Druckverlust sank mit Turbulatoren (1,83 und 1,87&nbsp;Pa statt 2,30&nbsp;Pa), die orthogonale Netzqualität fiel von 0,826 auf 0,735 bzw. 0,783, und die Austrittstemperatur der Kaltluft blieb in allen Fällen bei etwa 296&nbsp;K.</li>
+          <li>Die Rohrströmung ist laminar (Re&nbsp;=&nbsp;1.585) und der Wellenturbulator stört sie nur axial; das Team empfahl deshalb Twisted-Tape-Einsätze aus der Literatur, die mit einem physischen Prototyp zu bestätigen sind.</li>
         </ul>
       </div>
       <div class="views">
@@ -294,7 +295,7 @@
     <div class="spec">
       <section><h3 class="f">CAD</h3><ul><li><span>Creo Parametric, SolidWorks</span></li></ul></section>
       <section><h3 class="f">CAE und Simulation</h3><ul><li><span>Ansys Fluent, LS-DYNA, Mechanical</span></li></ul></section>
-      <section><h3 class="f">Datenanalyse</h3><ul><li><span>Excel (fortgeschritten), Power BI, Minitab</span></li></ul></section>
+      <section><h3 class="f">Datenanalyse</h3><ul><li><span>Excel, Minitab (DoE, ANOVA)</span></li></ul></section>
       <section><h3 class="f">PLM</h3><ul><li><span>Windchill, PDM-Prozesse</span></li></ul></section>
       <section><h3 class="f">Zertifikate</h3><ul><li><span>PMI CAPM</span><span>2026</span></li><li><span>Lean Six Sigma Yellow Belt</span><span>2026</span></li><li><span>Dassault Systèmes CSWA</span><span>2025</span></li></ul></section>
       <section><h3 class="f">Sprachen</h3><ul><li><span>Spanisch</span><span>Muttersprache</span></li><li><span>Englisch, TOEFL iBT 120/120</span><span>C2, 2025</span></li><li><span>Deutsch, Goethe-Zertifikat</span><span>B2, 2026</span></li></ul></section>
